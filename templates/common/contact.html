@@ -1,0 +1,47 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>MIT-RHA</title>
+
+ <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+</head>
+<body >
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+  <a class="navbar-brand" href="{% url 'home' %}"><img src="{% static 'img/mit.png' %}" width="70" height="70"></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav mx-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="{% url 'home' %}">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'about' %}">About Us</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'contact' %}">Contact Us</a>
+      </li>
+      </ul>
+      <ul class="navbar-nav mx-right">
+      <li class="nav-item">
+
+        <a href="{% url 'login' %}" class="btn btn-outline-success" role="button" aria-pressed="true" >Login</a>
+
+        <a href="{% url 'register' %}" class="btn btn-outline-danger" role="button" aria-pressed="true"> Register</a>
+      </li>
+
+    </ul>
+  </div>
+
+</nav>
+
+<h1>Contact Us </h1>
+<p>redhat@mit.asia </p>
+
+</body>
+
+</html>
