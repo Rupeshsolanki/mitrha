@@ -10,9 +10,10 @@ WORKDIR /code
 RUN pip install --upgrade pip
 RUN apk add --no-cache jpeg-dev zlib-dev
 RUN apk add --no-cache --virtual .build-deps build-base linux-headers \
-    && pip install Pillow
-RUN pip install -r requirements.txt
+     & pip install Pillow
+
 COPY . /code/
+RUN pip install -r  requirements.txt
 
 CMD ["python", "manage.py" ,"runserver" ,"0.0.0.0:8000"]
 
